@@ -106,6 +106,43 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     createSparkles(100);
+// NUEVO: Generación de palabras "te amo" y "mai y nyo" flotantes
+    function spawnFloatingWords() {
+        const words = ["te amo", "mai y nyo"];
+        
+        setInterval(() => {
+            const wordEl = document.createElement('div');
+            wordEl.classList.add('floating-word');
+            
+            wordEl.innerText = words[Math.floor(Math.random() * words.length)];
+            
+            // Posición aleatoria (evitando un poco los bordes extremos)
+            const x = Math.random() * 90; 
+            const y = Math.random() * 90;
+            
+            // Rotación leve para darle un aspecto natural
+            const rotation = (Math.random() * 30) - 15; 
+            wordEl.style.setProperty('--rot', `${rotation}deg`);
+            
+            const fontSize = Math.random() * 1.5 + 1.2; 
+            const duration = Math.random() * 4 + 4; 
+            
+            wordEl.style.left = `${x}vw`;
+            wordEl.style.top = `${y}vh`;
+            wordEl.style.fontSize = `${fontSize}rem`;
+            wordEl.style.animationDuration = `${duration}s`;
+            
+            starsContainer.appendChild(wordEl);
+            
+            setTimeout(() => {
+                wordEl.remove();
+            }, duration * 1000);
+        }, 3000); // Aparece una palabra nueva cada 3 segundos
+    }
+
+    spawnFloatingWords();
+
+
 
     // Interacción del cursor
     document.addEventListener('mousemove', (e) => {
