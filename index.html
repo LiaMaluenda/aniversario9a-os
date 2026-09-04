@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pide los deseos y las estrellas te lo concederán</title>
+    <link rel="stylesheet" href="css\styles.css">
+</head>
+<body>
+    <div id="stars-container"></div>
+    
+    <main class="glass-panel">
+        <h1>Pide los deseos y las estrellas te lo concederán</h1>
+        <p>Por estos hermosos 9 años juntas, quiero que me permitas conocer tus deseos, metas o pensamientos, las estrellas lo harán posible.</p>
+        <form id="wish-form">
+            <textarea 
+                name="entry.1424785602" 
+                id="wish-input" 
+                placeholder="Mi deseo es..." 
+                required
+            ></textarea>
+            <button type="submit" id="submit-btn">Enviar a las estrellas... </button>
+        </form>
+
+       <div id="success-message" class="hidden">
+            <p id="cosmos-msg">Tu deseo ha sido escuchado✨</p>
+            
+            <!-- NUEVO: Carta conmemorativa que aparece al enviar -->
+            <div id="anniversary-card" class="card-container">
+                <h3>Nuestros corazones vibran en sintonía, haciendo cada deseo posible.</h3>
+    
+                <p class="signature"> De tu Nyo, para mi Mai~</p>
+            </div>
+            <button id="download-btn" class="download-btn">Descargar Secreto</button>
+        </div>
+    </main>
+
+    <script src="js\script.js"></script>
+</body>
+</html>

@@ -1,0 +1,328 @@
+:root {
+    --bg-dark: #0a0410;
+    --bg-purple: #1a0b2e;
+    --iridescent-yellow: #f9e287;
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(249, 226, 135, 0.2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: radial-gradient(circle at center, var(--bg-purple) 0%, var(--bg-dark) 100%);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+#stars-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.sparkle {
+    position: absolute;
+    background: var(--iridescent-yellow);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--iridescent-yellow), 0 0 20px #e0b0ff;
+    animation: twinkle linear infinite;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0; transform: scale(0.5); }
+    50% { opacity: 1; transform: scale(1.2); }
+    100% { opacity: 0; transform: scale(0.5); }
+}
+
+.glass-panel {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    z-index: 1;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+    transition: all 0.4s ease;
+}
+
+h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(90deg, #f9e287, #e0b0ff, #87ceeb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 20px rgba(249, 226, 135, 0.3);
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    color: #ccc;
+}
+
+textarea {
+    width: 100%;
+    height: 120px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--glass-border);
+    border-radius: 10px;
+    padding: 1rem;
+    color: #fff;
+    font-size: 1rem;
+    resize: none;
+    margin-bottom: 1.5rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+textarea:focus {
+    border-color: var(--iridescent-yellow);
+    box-shadow: 0 0 15px rgba(249, 226, 135, 0.2);
+}
+
+button {
+    background: transparent;
+    color: var(--iridescent-yellow);
+    border: 1px solid var(--iridescent-yellow);
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+button:hover {
+    background: var(--iridescent-yellow);
+    color: var(--bg-dark);
+    box-shadow: 0 0 20px var(--iridescent-yellow);
+}
+
+.hidden {
+    display: none;
+}
+
+#success-message p {
+    color: var(--iridescent-yellow);
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 2rem;
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+--
+/* ... TODO TU CSS ANTERIOR SE MANTIENE EXACTAMENTE IGUAL HASTA EL @keyframes fadeIn ... */
+:root {
+    --bg-dark: #0a0410;
+    --bg-purple: #1a0b2e;
+    --iridescent-yellow: #f9e287;
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(249, 226, 135, 0.2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: radial-gradient(circle at center, var(--bg-purple) 0%, var(--bg-dark) 100%);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+#stars-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.sparkle {
+    position: absolute;
+    background: var(--iridescent-yellow);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--iridescent-yellow), 0 0 20px #e0b0ff;
+    animation: twinkle linear infinite;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0; transform: scale(0.5); }
+    50% { opacity: 1; transform: scale(1.2); }
+    100% { opacity: 0; transform: scale(0.5); }
+}
+
+.glass-panel {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    z-index: 1;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+    transition: all 0.4s ease;
+}
+
+h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(90deg, #f9e287, #e0b0ff, #87ceeb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 20px rgba(249, 226, 135, 0.3);
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    color: #ccc;
+}
+
+textarea {
+    width: 100%;
+    height: 120px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--glass-border);
+    border-radius: 10px;
+    padding: 1rem;
+    color: #fff;
+    font-size: 1rem;
+    resize: none;
+    margin-bottom: 1.5rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+textarea:focus {
+    border-color: var(--iridescent-yellow);
+    box-shadow: 0 0 15px rgba(249, 226, 135, 0.2);
+}
+
+button {
+    background: transparent;
+    color: var(--iridescent-yellow);
+    border: 1px solid var(--iridescent-yellow);
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+button:hover {
+    background: var(--iridescent-yellow);
+    color: var(--bg-dark);
+    box-shadow: 0 0 20px var(--iridescent-yellow);
+}
+
+.hidden {
+    display: none;
+}
+
+#cosmos-msg {
+    color: var(--iridescent-yellow);
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* =========================================
+   NUEVOS ESTILOS PARA LA CARTA Y EL BOTÓN
+   ========================================= */
+.card-container {
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, rgba(26, 11, 46, 0.6), rgba(10, 4, 16, 0.8));
+    border: 1px solid rgba(224, 176, 255, 0.3);
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(249, 226, 135, 0.1);
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 0.8s; /* Aparece después del mensaje de éxito */
+}
+
+.card-container h3 {
+    color: var(--iridescent-yellow);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px rgba(249, 226, 135, 0.3);
+}
+
+.card-container p {
+    color: #fff;
+    font-size: 0.95rem;
+    font-style: italic;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.card-container .signature {
+    text-align: right;
+    color: #e0b0ff;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.download-btn {
+    margin-top: 1.5rem;
+    background: var(--iridescent-yellow);
+    color: var(--bg-dark);
+    box-shadow: 0 0 15px rgba(249, 226, 135, 0.4);
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 1.5s; /* Aparece de último */
+}
+
+.download-btn:hover {
+    background: #fff;
+    color: var(--bg-dark);
+    box-shadow: 0 0 25px #fff;
+}
