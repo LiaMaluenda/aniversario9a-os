@@ -34,9 +34,23 @@
     
                 <p class="signature"> De tu Nyo, para mi Mai~</p>
             </div>
-            <button id="download-btn" class="download-btn">Descargar Secreto</button>
+            <button id="download-btn" class="download-btn">Toca para ver un secreto </button>
         </div>
     </main>
+
+    <!-- Contenedor del secreto (Oculto por defecto) -->
+    <div id="secret-overlay" class="hidden">
+        <canvas id="heartCanvas"></canvas>
+        <button id="close-secret-btn">Volver a la carta</button>
+    </div>
+    <!-- Contenedor del video de YouTube (Oculto por defecto) -->
+    <div id="video-overlay" class="hidden">
+        <div class="video-container">
+            <!-- El 'src' está vacío por defecto, lo llenaremos con JavaScript para que no suene de fondo -->
+            <iframe id="youtube-video" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <button id="close-video-btn">Volver a la carta</button>
+    </div>
 
     <script src="js\script.js"></script>
 </body>
